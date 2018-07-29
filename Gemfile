@@ -12,11 +12,15 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'qiita-markdown'
+gem 'github-linguist'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'html2slim'
 gem 'slim-rails'
 gem 'active_decorator'
+
+
 
 group :development, :test do
   gem 'rspec-rails'

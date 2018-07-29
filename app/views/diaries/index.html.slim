@@ -1,0 +1,23 @@
+h1 Listing diaries
+
+table
+  thead
+    tr
+      th Title
+      th Content
+      th
+      th
+      th
+
+  tbody
+    - @diaries.each do |diary|
+      tr
+        td = diary.title
+        td = diary.content
+        td = link_to 'Show', diary
+        td = link_to 'Edit', edit_diary_path(diary)
+        td = link_to 'Destroy', diary, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Diary', new_diary_path

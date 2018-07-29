@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @diary.title
+p
+  strong Content:
+  = qiita_markdown(@diary.content)
+
+=> link_to 'Edit', edit_diary_path(@diary)
+'|
+=< link_to 'Back', diaries_path
