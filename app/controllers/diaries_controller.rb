@@ -28,6 +28,8 @@ class DiariesController < ApplicationController
 
     respond_to do |format|
       if @diary.save
+        notifier = Slack::Notifier.new(ENV['SLACK_WEBHOOK_URL']) #事前準備で取得したWebhook URL
+        notifier.ping("#{@diary.title}")
         format.html { redirect_to @diary, notice: 'Diary was successfully created.' }
         format.json { render :show, status: :created, location: @diary }
       else

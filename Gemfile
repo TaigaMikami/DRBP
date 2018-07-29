@@ -20,7 +20,8 @@ gem 'html2slim'
 gem 'slim-rails'
 gem 'active_decorator'
 
-
+gem 'dotenv-rails'
+gem 'slack-notifier'
 
 group :development, :test do
   gem 'rspec-rails'
