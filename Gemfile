@@ -16,11 +16,18 @@ gem 'qiita-markdown'
 gem 'github-linguist'
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# ユーザー認証
+gem 'devise'
+
+# ビュー関係
 gem 'html2slim'
 gem 'slim-rails'
 gem 'active_decorator'
 
+# 環境変数
 gem 'dotenv-rails'
+
+# Slack通知Bot
 gem 'slack-notifier'
 
 group :development, :test do
