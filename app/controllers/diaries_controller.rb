@@ -1,6 +1,6 @@
 class DiariesController < ApplicationController
   before_action :set_diary, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /diaries
   # GET /diaries.json
   def index
@@ -25,7 +25,8 @@ class DiariesController < ApplicationController
   # POST /diaries.json
   def create
     @diary = Diary.new(diary_params)
-
+    @diary.user_id = current_user.id
+    binding.pry
     respond_to do |format|
       if @diary.save
         notifier = Slack::Notifier.new(ENV['SLACK_WEBHOOK_URL']) #事前準備で取得したWebhook URL
@@ -71,6 +72,7 @@ class DiariesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def diary_params
+      binding.pry
       params.require(:diary).permit(:title, :content)
     end
 end
