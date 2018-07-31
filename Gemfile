@@ -12,15 +12,24 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'qiita-markdown'
-gem 'github-linguist'
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# qiita-markdown
+gem 'qiita-markdown'
+gem 'github-linguist'
+
+# ユーザー認証
+gem 'devise'
+
+# ビュー関係
 gem 'html2slim'
 gem 'slim-rails'
 gem 'active_decorator'
 
+# 環境変数
 gem 'dotenv-rails'
+
+# Slack通知Bot
 gem 'slack-notifier'
 
 group :development, :test do
