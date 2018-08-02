@@ -12,11 +12,21 @@ html{
 .header{
   border-top:3px solid #000;
 }
+
+.header-logo {
+  text-align: center;
+}
 .logo{
   margin:0.5em auto;
-  display:block;
   width: 180px;
   object-fit: contain;
+}
+
+.user-link {
+  display: inline-flex;
+  position: fixed;
+  right: 30px;
+  margin-top: 5px;
 }
 
 .headerNavBtn{
