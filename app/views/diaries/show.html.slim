@@ -1,7 +1,8 @@
 .section
     .container
+      div data-diary-id="#{@diary.id}" id="diary-#{@diary.id}"
         .title
-            h2.heading = @diary.title
+          h2.heading = @diary.title
 
         p#notice = notice
 
@@ -16,3 +17,5 @@
         => link_to '編集', edit_diary_path(@diary)
         '|
         =< link_to '日報一覧へ', diaries_path
+
+        = render "likes/like", diary: @diary

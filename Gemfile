@@ -27,6 +27,9 @@ gem 'slim-rails'
 gem 'active_decorator'
 gem 'rails-i18n'
 
+# いいね関連
+gem 'counter_culture'
+
 # 環境変数
 gem 'dotenv-rails'
 

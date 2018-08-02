@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   end
 
   resources :diaries
+  resources :likes, only: [:create, :destroy]
 end
