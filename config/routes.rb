@@ -14,5 +14,6 @@ Rails.application.routes.draw do
 
   resources :diaries
   get '/likes_ranking', to: 'diaries#likes_ranking'
+  get '/power_ranking', to: 'diaries#power_ranking'
   resources :likes, only: [:create, :destroy]
 end

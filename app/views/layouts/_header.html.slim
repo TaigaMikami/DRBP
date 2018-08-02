@@ -6,11 +6,14 @@
   .container
     .row.headerNavBox
       = link_to diaries_path
-        .col-xs-6.col-sm-4.headerNavBtn
+        .col-xs-6.col-sm-3.headerNavBtn
           |  日報一覧
       = link_to new_diary_path
-        .col-xs-6.col-sm-4.headerNavBtn
+        .col-xs-6.col-sm-3.headerNavBtn
           |  新規投稿
       = link_to likes_ranking_path
-        .col-xs-6.col-sm-4.headerNavBtn
+        .col-xs-6.col-sm-3.headerNavBtn
           |  いいねランキング
+      = link_to power_ranking_path
+        .col-xs-6.col-sm-3.headerNavBtn
+          |  戦闘力ランキング
