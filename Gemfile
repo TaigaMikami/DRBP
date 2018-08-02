@@ -25,6 +25,7 @@ gem 'devise'
 gem 'html2slim'
 gem 'slim-rails'
 gem 'active_decorator'
+gem 'rails-i18n'
 
 # 環境変数
 gem 'dotenv-rails'

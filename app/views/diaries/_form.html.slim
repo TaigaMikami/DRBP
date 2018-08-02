@@ -7,9 +7,10 @@
           li = message
 
   .field
-    = f.label :title, "タイトル"
+    = f.label :title
     = f.text_field :title, class: "form-control"
   .field
-    = f.label :content, "内容"
+    = f.label :content
     = f.text_area :content, class: "form-control"
-  .actions = f.submit
+  .actions
+    = f.submit
