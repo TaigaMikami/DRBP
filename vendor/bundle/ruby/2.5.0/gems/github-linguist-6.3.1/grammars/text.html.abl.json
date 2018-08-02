@@ -1,0 +1,70 @@
+{
+  "name": "HTML (ABL)",
+  "scopeName": "text.html.abl",
+  "patterns": [
+    {
+      "name": "source.abl",
+      "begin": ".*(\u003c)(script) (language)(=)(\"SpeedScript\")(\u003e)",
+      "end": ".*(\u003c/)(script)(\u003e)",
+      "patterns": [
+        {
+          "include": "source.abl"
+        }
+      ],
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.script.html"
+        },
+        "3": {
+          "name": "entity.other.attribute-name.html"
+        },
+        "4": {
+          "name": "meta.tag.inline.any.html"
+        },
+        "5": {
+          "name": "string.double.quoted.html"
+        },
+        "6": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.html"
+        },
+        "2": {
+          "name": "entity.name.tag.script.html"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.html"
+        }
+      }
+    },
+    {
+      "name": "source.abl",
+      "begin": "\\`",
+      "end": "\\`",
+      "patterns": [
+        {
+          "include": "source.abl"
+        }
+      ],
+      "beginCaptures": {
+        "0": {
+          "name": "string.double.quoted.html"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "string.double.quoted.html"
+        }
+      }
+    },
+    {
+      "include": "text.html.basic"
+    }
+  ]
+}

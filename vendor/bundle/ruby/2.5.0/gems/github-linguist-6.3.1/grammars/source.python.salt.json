@@ -1,0 +1,9 @@
+{
+  "name": "Salt pydsl (Python)",
+  "scopeName": "source.python.salt",
+  "patterns": [
+    {
+      "include": "source.python"
+    }
+  ]
+}

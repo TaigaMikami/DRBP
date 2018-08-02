@@ -1,0 +1,12 @@
+{
+  "name": "Objective-C++",
+  "scopeName": "source.objc++",
+  "patterns": [
+    {
+      "include": "source.c++"
+    },
+    {
+      "include": "source.objc"
+    }
+  ]
+}

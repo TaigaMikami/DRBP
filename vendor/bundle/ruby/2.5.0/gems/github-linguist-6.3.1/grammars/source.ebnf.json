@@ -1,0 +1,202 @@
+{
+  "name": "EBNF",
+  "scopeName": "source.ebnf",
+  "patterns": [
+    {
+      "include": "#comment"
+    },
+    {
+      "name": "meta.syntax-rule.ebnf",
+      "begin": "\\s*(\\b(?:\\w|\\s|[\\-_0-9])+\\b)\\s*(=)",
+      "end": ";",
+      "patterns": [
+        {
+          "include": "#comment"
+        },
+        {
+          "include": "#subrules"
+        }
+      ],
+      "captures": {
+        "1": {
+          "name": "entity.name.function.ebnf"
+        },
+        "2": {
+          "name": "keyword.operator.definition.ebnf"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.terminator.syntax-rule.ebnf"
+        }
+      }
+    }
+  ],
+  "repository": {
+    "comment": {
+      "name": "comment.block.ebnf",
+      "begin": "\\(\\*(?!\\))",
+      "end": "\\*\\)"
+    },
+    "double-quote-string": {
+      "name": "string.quoted.double.ebnf",
+      "begin": "\"",
+      "end": "\""
+    },
+    "group": {
+      "begin": "\\(",
+      "end": "\\)",
+      "patterns": [
+        {
+          "include": "#subrules"
+        }
+      ],
+      "beginCaptures": {
+        "0": {
+          "name": "keyword.other.group.begin.ebnf"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "keyword.other.group.end.ebnf"
+        }
+      }
+    },
+    "invalid": {
+      "name": "invalid.illegal.ebnf",
+      "match": "\\(\\s*[*:/]\\s*\\)"
+    },
+    "non-terminal": {
+      "name": "variable.other.non-terminal.ebnf",
+      "match": "\\w[\\w\\-_0-9]*\\w"
+    },
+    "operator": {
+      "patterns": [
+        {
+          "include": "#operator-alternative"
+        },
+        {
+          "include": "#operator-concatenation"
+        },
+        {
+          "include": "#operator-exception"
+        }
+      ]
+    },
+    "operator-alternative": {
+      "name": "keyword.operator.alternative.ebnf",
+      "match": "\\|"
+    },
+    "operator-concatenation": {
+      "name": "keyword.operator.concatenation.ebnf",
+      "match": ","
+    },
+    "operator-exception": {
+      "name": "keyword.operator.exception.ebnf",
+      "match": "-"
+    },
+    "optional": {
+      "begin": "\\[",
+      "end": "\\]",
+      "patterns": [
+        {
+          "include": "#subrules"
+        }
+      ],
+      "beginCaptures": {
+        "0": {
+          "name": "keyword.other.optional.begin.ebnf"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "keyword.other.optional.end.ebnf"
+        }
+      }
+    },
+    "repetition": {
+      "begin": "{",
+      "end": "}",
+      "patterns": [
+        {
+          "include": "#subrules"
+        }
+      ],
+      "beginCaptures": {
+        "0": {
+          "name": "keyword.other.repetition.begin.ebnf"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "keyword.other.repetition.end.ebnf"
+        }
+      }
+    },
+    "repetition-numbered": {
+      "match": "(\\d+)\\s*(\\*)",
+      "captures": {
+        "1": {
+          "name": "constant.numeric.integer.ebnf"
+        },
+        "2": {
+          "name": "keyword.operator.repetition.ebnf"
+        }
+      }
+    },
+    "single-quote-string": {
+      "name": "string.quoted.single.ebnf",
+      "begin": "'",
+      "end": "'"
+    },
+    "special-sequence": {
+      "name": "entity.other.attribute-name.ebnf",
+      "begin": "\\?",
+      "end": "\\?",
+      "beginCaptures": {
+        "0": {
+          "name": "keyword.other.special-sequence.begin.ebnf"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "keyword.other.special-sequence.end.ebnf"
+        }
+      }
+    },
+    "subrules": {
+      "patterns": [
+        {
+          "include": "#invalid"
+        },
+        {
+          "include": "#optional"
+        },
+        {
+          "include": "#repetition"
+        },
+        {
+          "include": "#group"
+        },
+        {
+          "include": "#repetition-numbered"
+        },
+        {
+          "include": "#non-terminal"
+        },
+        {
+          "include": "#operator"
+        },
+        {
+          "include": "#single-quote-string"
+        },
+        {
+          "include": "#double-quote-string"
+        },
+        {
+          "include": "#special-sequence"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Bison",
+  "scopeName": "source.bison",
+  "patterns": [
+    {
+      "name": "meta.prologue.bison",
+      "contentName": "source.c",
+      "begin": "^%\\{",
+      "end": "%\\}",
+      "patterns": [
+        {
+          "include": "source.c"
+        }
+      ]
+    },
+    {
+      "name": "meta.declarations.bison",
+      "begin": "^(?!%%$)",
+      "end": "^(?=%%$)"
+    },
+    {
+      "begin": "^%%$",
+      "end": "$.^",
+      "patterns": [
+        {
+          "contentName": "meta.rules.bison",
+          "begin": "^(?!%%$)",
+          "end": "^(?=%%$)",
+          "patterns": [
+            {
+              "include": "source.c"
+            }
+          ]
+        },
+        {
+          "contentName": "meta.epilogue.bison",
+          "begin": "^%%$",
+          "end": "$.^",
+          "patterns": [
+            {
+              "name": "source.c",
+              "begin": "^",
+              "end": "$.^",
+              "patterns": [
+                {
+                  "include": "source.c"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "fsharp.fsl",
+  "scopeName": "source.fsharp.fsl",
+  "patterns": [
+    {
+      "include": "source.fsharp"
+    }
+  ]
+}

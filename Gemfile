@@ -32,6 +32,11 @@ gem 'dotenv-rails'
 # Slack通知Bot
 gem 'slack-notifier'
 
+# bootstrap
+gem 'bootstrap-sass'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'

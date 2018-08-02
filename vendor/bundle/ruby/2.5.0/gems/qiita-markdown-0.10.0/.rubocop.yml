@@ -1,0 +1,10 @@
+inherit_from: .rubocop_todo.yml
+
+Metrics/ClassLength:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/TrailingComma:
+  EnforcedStyleForMultiline: comma

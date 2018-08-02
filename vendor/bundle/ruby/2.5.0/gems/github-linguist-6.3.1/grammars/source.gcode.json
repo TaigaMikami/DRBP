@@ -1,0 +1,18 @@
+{
+  "name": "GCode",
+  "scopeName": "source.gcode",
+  "patterns": [
+    {
+      "name": "comment.number-sign.nc",
+      "match": "(\\()(.*)(\\))"
+    },
+    {
+      "name": "keyword.nc",
+      "match": "(G|F|S|M|T|O|%)[0-9]+"
+    },
+    {
+      "name": "variable.language.MCPOST",
+      "match": "(X|Y|Z|I|J|K)([0-9]+(?:\\.[0-9]*)?)"
+    }
+  ]
+}

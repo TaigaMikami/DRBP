@@ -1,12 +1,18 @@
-p#notice = notice
+.section
+    .container
+        .title
+            h2.heading = @diary.title
 
-p
-  strong Title:
-  = @diary.title
-p
-  strong Content:
-  = qiita_markdown(@diary.content)
+        p#notice = notice
 
-=> link_to 'Edit', edit_diary_path(@diary)
-'|
-=< link_to 'Back', diaries_path
+        p
+          strong タイトル:
+          = @diary.title
+        p
+          strong 内容:
+          .content
+            = qiita_markdown(@diary.content)
+
+        => link_to '編集', edit_diary_path(@diary)
+        '|
+        =< link_to '日報一覧へ', diaries_path

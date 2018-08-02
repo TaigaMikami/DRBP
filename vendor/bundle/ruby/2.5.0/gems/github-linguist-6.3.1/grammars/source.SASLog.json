@@ -1,0 +1,18 @@
+{
+  "name": "SAS Log",
+  "scopeName": "source.SASLog",
+  "patterns": [
+    {
+      "name": "keyword.source.SASLog",
+      "match": "^NOTE:.*"
+    },
+    {
+      "name": "invalid.source.SASLog",
+      "match": "(^(ERROR|WARNING)|Uninitialized| remerg|invalid\\b).*"
+    },
+    {
+      "name": "entity.name.function.source.SASLog",
+      "match": "^INFO.*"
+    }
+  ]
+}
