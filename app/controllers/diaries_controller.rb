@@ -63,6 +63,9 @@ class DiariesController < ApplicationController
     end
   end
 
+  def likes_ranking
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_diary
