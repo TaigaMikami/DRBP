@@ -26,11 +26,10 @@ class DiariesController < ApplicationController
   def create
     @diary = Diary.new(diary_params)
     @diary.user_id = current_user.id
-    binding.pry
     respond_to do |format|
       if @diary.save
-        notifier = Slack::Notifier.new(ENV['SLACK_WEBHOOK_URL']) #事前準備で取得したWebhook URL
-        notifier.ping("#{@diary.title}")
+        # notifier = Slack::Notifier.new(ENV['SLACK_WEBHOOK_URL']) #事前準備で取得したWebhook URL
+        # notifier.ping("#{@diary.title}")
         format.html { redirect_to @diary, notice: 'Diary was successfully created.' }
         format.json { render :show, status: :created, location: @diary }
       else
@@ -72,7 +71,6 @@ class DiariesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def diary_params
-      binding.pry
       params.require(:diary).permit(:title, :content)
     end
 end

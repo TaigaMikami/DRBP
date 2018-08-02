@@ -1,3 +1,136 @@
-// Place all the styles related to the diaries controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html{
+  font-size: 62.5%;
+}
+*, *::before, *::after{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.header{
+  border-top:3px solid #000;
+}
+.logo{
+  margin:0.5em auto;
+  display:block;
+  width: 180px;
+  object-fit: contain;
+}
+
+.headerNavBtn{
+  text-align:center;
+  height:3em;
+  line-height:3em;
+  color:#5F5F5F;
+  font-size:16px;
+}
+
+.headerNavBtn:hover{
+  background:#EEE;
+}
+
+.jumbotron {
+  padding-top: 0px;
+  background: url(main_img.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 400px;
+}
+
+.section{
+  background: #232829;
+  background: -moz-linear-gradient(50% 0% -90deg, #000 0%, #232829 100%);
+  background: -o-linear-gradient(-90deg, #000 0%, #232829 100%);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0, #000), color-stop(1, #232829));
+  background: -webkit-linear-gradient(-90deg, #000 0%, #232829 100%);
+  background: linear-gradient(180deg, #000 0%, #232829 100%);
+  padding: 2em 0 3em;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff000000,endColorstr=#ff232829,GradientType=0)";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff000000,endColorstr=#ff232829,GradientType=0);
+}
+.mainVisual_wrapper .container{
+  padding:0;
+}
+.mainVisual_wrapper.section{
+  padding:0;
+}
+.col_box{
+  background:#FFF;
+  border-radius:3px;
+  padding:15px 0 15px;
+  margin-bottom:1em;
+}
+.section{
+  background: #232829;
+  background: -moz-linear-gradient(50% 0% -90deg, #000 0%, #232829 100%);
+  background: -o-linear-gradient(-90deg, #000 0%, #232829 100%);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0, #000), color-stop(1, #232829));
+  background: -webkit-linear-gradient(-90deg, #000 0%, #232829 100%);
+  background: linear-gradient(180deg, #000 0%, #232829 100%);
+  padding: 2em 0 3em;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff000000,endColorstr=#ff232829,GradientType=0)";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff000000,endColorstr=#ff232829,GradientType=0);
+}
+.mainVisual_wrapper.section{
+  padding:0;
+}
+
+.section{
+  background: #151515 url('main_img.jpg') no-repeat fixed left bottom;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #211816;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+.heading{
+  position: relative;
+  margin: 30px 0 15px;
+  letter-spacing: 2px; // 文字間隔
+  font-size: 3.5rem;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+.heading::before,
+.heading::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid #999;
+}
+
+.heading::before{
+  bottom: 5px;
+}
+
+.title{
+  text-align: center;
+}
+
+.field {
+  input,textarea{
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+
+.table{
+  background-color: rgba(210,210,210,0.9);
+  th{
+    background-color: rgba(220,220,220,0.9);
+    text-align: center;
+  }
+}
+
+.content{
+  background-color: rgba(255,255,255,0.9);
+  padding: 80px 30px;
+  width: 60%;
+  margin: 0 auto;
+}

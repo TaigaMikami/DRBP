@@ -1,8 +1,11 @@
-h1 Editing diary
+.section
+    .container
+        .title
+            h2.heading 日報編集
 
-== render 'form'
+        == render 'form'
 
-=> link_to 'Show', @diary
-'|
-=< link_to 'Back', diaries_path
+        => link_to 'Show', @diary
+        '|
+        =< link_to 'Back', diaries_path
 
