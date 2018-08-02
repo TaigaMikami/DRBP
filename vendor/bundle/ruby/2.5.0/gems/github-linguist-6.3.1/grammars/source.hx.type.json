@@ -1,8 +1,0 @@
-{
-  "scopeName": "source.hx.type",
-  "patterns": [
-    {
-      "include": "source.hx#type"
-    }
-  ]
-}
