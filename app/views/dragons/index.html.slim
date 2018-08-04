@@ -1,2 +1,14 @@
-h1 Dragons#index
-p Find me in app/views/dragons/index.html.slim
+table.table.table-hover
+  thead
+    tr
+      th 画像
+      th 名前
+      th 最小値
+      th 最大値
+  tbody
+    - @dragons.each do |dragon|
+      tr
+        td = image_tag dragon.image_url, size: '240x240'
+        td = dragon.name
+        td = dragon.min_power
+        td = dragon.max_power
