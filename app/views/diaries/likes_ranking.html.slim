@@ -1,1 +1,23 @@
-p commig soon
+.section
+  .container
+    .title
+      h2.heading 日報一覧
+
+    table.table.table-hover
+      thead
+        tr
+          th タイトル
+          th 内容
+          th
+          th
+          th
+
+      tbody
+        - @diaries.each do |diary|
+          tr
+            td = diary.title
+            td = diary.content
+            td = link_to '詳細', diary
+            td = link_to '編集', edit_diary_path(diary)
+            td = link_to '削除', diary, data: {confirm: 'Are you sure?'}, method: :delete
+    br

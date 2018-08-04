@@ -64,6 +64,7 @@ class DiariesController < ApplicationController
   end
 
   def likes_ranking
+    @diaries = Diary.all.sort_by { |d| d.likes.count }.reverse
   end
 
   def power_ranking
