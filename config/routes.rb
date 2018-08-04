@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'powers/index'
+  get 'dragons/index'
   devise_for :users, controllers: {
     confirmations: 'users/confirmations',
     passwords:     'users/passwords',
