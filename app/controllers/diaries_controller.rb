@@ -70,13 +70,13 @@ class DiariesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_diary
-      @diary = Diary.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_diary
+    @diary = Diary.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def diary_params
-      params.require(:diary).permit(:title, :content)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def diary_params
+    params.require(:diary).permit(:title, :content)
+  end
 end

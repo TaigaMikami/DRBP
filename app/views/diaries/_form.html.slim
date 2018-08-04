@@ -1,3 +1,6 @@
+script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.js"
+script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.js"
+
 .container
   .row
     = form_for @diary do |f|
@@ -9,14 +12,33 @@
               li = message
       = f.label :title
       = f.text_field :title, class: "form-control"
-      .col-6.col-sm-6
+
+      #editor
+        .col-6.col-sm-6
+          label 内容
+          textarea#n.form-control debounce="50" name="diary[content]" rows="18" v-model="input"
+
+        .col-6.col-sm-6
+          label プレビュー
+          .markdown-preview v-html=("input | marked")
 
 
-        = f.label :content
-        = f.text_area :content, class: "form-control"
-      .col-6.col-sm-6
-
-        label プレビュー
-        .markdown-preview
       .actions
         = f.submit
+
+javascript:
+  document.addEventListener('page:change', function () {
+    location.reload();
+  });
+
+  window.onload = function () {
+    new Vue({
+      el: '#editor',
+      data: {
+        input: '#{ j @diary.content }',
+      },
+      filters: {
+        marked: marked,
+      },
+    });
+  };
