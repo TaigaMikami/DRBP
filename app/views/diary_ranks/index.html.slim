@@ -1,2 +1,27 @@
-h1 DiaryRanks#index
-p Find me in app/views/diary_ranks/index.html.slim
+.container
+  .row
+    .col-md-8
+      ul.list-group
+        li.list-group-item.list-group-item-action.list-group-item-success 戦闘力ランキング
+        - @power_rank_diaries.each do |diary|
+          li.list-group-item
+            = image_tag diary.power&.dragon.image_url, size: '50x50'
+            = diary.title
+            = link_to '詳細', diary
+
+    .col-md-4
+      ul.list-group
+        li.list-group-item.list-group-item-action.list-group-item-success いいねランキング
+        - @like_rank_diaries.each do |diary|
+          li.list-group-item
+            = diary.title
+            .btn.btn-info.btn-sm
+              = diary.likes.count
+
+      ul.list-group
+        li.list-group-item.list-group-item-action.list-group-item-success 新着
+        - @new_diaries.each do |diary|
+          li.list-group-item
+            = diary.title
+            .btn.btn-info.btn-sm
+              = diary.likes.count

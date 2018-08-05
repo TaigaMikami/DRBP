@@ -35,7 +35,6 @@ class DiariesController < ApplicationController
             @power = Power.create(point: @point, diary_id: @diary.id, dragon_id: d.id)
           end
         end
-        binding.pry
 
         # notifier = Slack::Notifier.new(ENV['SLACK_WEBHOOK_URL']) #事前準備で取得したWebhook URL
         # notifier.ping("#{@diary.title}")
