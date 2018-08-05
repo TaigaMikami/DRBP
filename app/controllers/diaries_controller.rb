@@ -37,8 +37,6 @@ class DiariesController < ApplicationController
           end
         end
 
-        # notifier = Slack::Notifier.new(ENV['SLACK_WEBHOOK_URL']) #事前準備で取得したWebhook URL
-        # notifier.ping("#{@diary.title}")
         format.html { redirect_to @diary, notice: 'Diary was successfully created.' }
         format.json { render :show, status: :created, location: @diary }
       else
@@ -88,5 +86,34 @@ class DiariesController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def diary_params
     params.require(:diary).permit(:title, :content)
+  end
+
+  def posted_diary_to_slack
+    notifier = Slack::Notifier.new(ENV['SLACK_WEBHOOK_URL'],
+                                   username: "日報スカウター") #事前準備で取得したWebhook URL
+
+    attachments = {
+      pretext: "#{@diary.user.name}さんの日報です！",
+
+      fields: [
+        {
+          value: "==============================",
+        },
+        {
+          title: "【日報タイトル】#{@diary.title}\n",
+        },
+        {
+          title: "【日報内容】",
+          value: "#{@diary.content}",
+        },
+        {
+          value: "==============================",
+        },
+      ],
+      color: "#439FE0",
+      footer: "Posted by tech craft",
+      mrkdwn_in: "fields"
+    }
+    notifier.post attachments: [attachments]
   end
 end
