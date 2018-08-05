@@ -1,28 +1,37 @@
-.container
-  .row
-    .col-md-8
-      ul.list-group
-        li.list-group-item.list-group-item-action.list-group-item-success 戦闘力ランキング
-        - @power_rank_diaries.each do |diary|
-          li.list-group-item
-            = image_tag diary.power&.dragon.image_url, size: '50x50'
-            = diary.user.profile.name
-            = diary.title
-            = link_to '詳細', diary
+.section.diary-report
+  .container
+    .row
+      .col-md-8
+        ul.list-group
+          li.list-group-item.list-group-item-action.list-group-item-success 戦闘力ランキング
+          - @power_rank_diaries.each do |diary|
+              li.list-group-item.power-list
+                = link_to diary do
+                  = image_tag diary.power&.dragon.image_url, size: '50x50'
+                  span.btn
+                    | 戦闘力
+                    = diary.power.point
+                  span.btn.power-list-name = diary&.user&.profile.name
+                  span.btn = diary.title
+                  span.btn = diary.content[0,10]
+                  span.btn.power-time = diary.created_at.strftime("%Y-%m-%d-%H:%M")
 
-    .col-md-4
-      ul.list-group
-        li.list-group-item.list-group-item-action.list-group-item-success いいねランキング
-        - @like_rank_diaries.each do |diary|
-          li.list-group-item
-            = diary.title
-            .btn.btn-info.btn-sm
-              = diary.likes.count
 
-      ul.list-group
-        li.list-group-item.list-group-item-action.list-group-item-success 新着
-        - @new_diaries.each do |diary|
-          li.list-group-item
-            = diary.title
-            .btn.btn-info.btn-sm
-              = diary.likes.count
+      .col-md-4
+        ul.list-group
+          li.list-group-item.list-group-item-action.list-group-item-success いいねランキング
+          - @like_rank_diaries.each do |diary|
+            li.list-group-item
+              span.btn.list-name = diary&.user&.profile.name
+              = diary.title
+              .btn.btn-info.btn-sm.iine
+                = diary.likes.count
+
+        ul.list-group
+          li.list-group-item.list-group-item-action.list-group-item-success 新着
+          - @new_diaries.each do |diary|
+            li.list-group-item
+              span.btn.list-name = diary&.user&.profile.name
+              = diary.title
+              .btn.btn-info.btn-sm.iine
+               = diary.likes.count
