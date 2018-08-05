@@ -32,6 +32,7 @@ class DiariesController < ApplicationController
       if @diary.save
         Dragon.all.each do |d|
           if d.min_power <= @point && d.max_power >= @point
+            # TODO ここをAPIを叩くように
             @power = Power.create(point: @point, diary_id: @diary.id, dragon_id: d.id)
           end
         end
