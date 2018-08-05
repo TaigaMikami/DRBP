@@ -152,7 +152,22 @@ html{
   height: 50vh;
 }
 
+#diary_title {
+  width: 96%;
+  margin-left: 2%;
+}
+
+#editor {
+  margin-top: 20px;
+  height: 300px;
+}
 .markdown-preview {
+  text-align: left;
+  padding: 10px;
   background-color: white;
-  height: 50vh;
+  height: 100%;
+}
+
+.actions {
+  margin-top: 200px;
 }

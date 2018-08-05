@@ -12,12 +12,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     build_resource(sign_up_params)
-    binding.pry
     if params[:name]
       resource.build_profile(name: params[:name])
     end
+
     resource.save
-    binding.pry
 
     yield resource if block_given?
     if resource.persisted?
