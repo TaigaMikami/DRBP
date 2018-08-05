@@ -1,3 +1,43 @@
-// Place all the styles related to the diary_ranks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.diary-report {
+  text-align: left;
+  padding-top: 30px;
+  background-color: #eeeeee;
+}
+
+.power-list {
+  .power-list-name {
+    margin-left: 20px;
+    border-radius: 0px;
+    background-color: #bbb;
+    color: white !important;
+    text-decoration: none !important;
+  }
+
+  .btn {
+    color: #5F5F5F;
+  }
+  :hover {
+    text-decoration: none !important;
+  }
+}
+
+
+
+.iine {
+  float: right;
+  padding: 0px 10px;
+  margin-left: 50px;
+}
+
+.power-time {
+  float: right;
+  padding-top: 30px;
+  color: #bbb !important;
+}
+
+.list-name {
+  margin-right: 10px;
+  border-radius: 0px;
+  background-color: #bbb;
+  color: white !important;
+}

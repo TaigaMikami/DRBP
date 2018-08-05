@@ -1,0 +1,53 @@
+script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.js"
+script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.js"
+
+.container
+  .row
+    = form_for @diary do |f|
+      - if @diary.errors.any?
+        #error_explanation
+          h2 = "#{pluralize(@diary.errors.count, "error")} prohibited this diary from being saved:"
+          ul
+            - @diary.errors.full_messages.each do |message|
+              li = message
+      = f.label :title
+      = f.text_field :title, class: "form-control"
+
+      #editor
+        .col-6.col-sm-6
+          label 内容
+          textarea#n.form-control debounce="50" name="diary[content]" rows="18" v-model="input"
+            | ## 業務内容&#13;&#13;&#13;
+            | ## 業務時間&#13;&#13;&#13;
+            | ## 良かったこと&#13;&#13;&#13;
+            | ## 悪かったこと&#13;&#13;&#13;
+
+        .col-6.col-sm-6
+          label プレビュー
+          .markdown-preview v-html=("input | marked")
+
+
+      .actions
+        = f.submit
+
+javascript:
+  window.onload = function () {
+    new Vue({
+      el: '#editor',
+      data: {
+        input: '#{ j @diary.content }',
+      },
+      filters: {
+        marked: marked,
+      },
+    });
+  };
+
+  $(function () {
+    var $textarea = $('#n');
+    var lineHeight = parseInt($textarea.css('lineHeight'));
+    $textarea.on('input', function (e) {
+      var lines = ($(this).val() + '\n').match(/\n/g).length;
+      $(this).height(lineHeight * lines);
+    });
+  });

@@ -152,7 +152,16 @@ html{
   height: 50vh;
 }
 
+#editor {
+  height: 300px;
+}
 .markdown-preview {
+  text-align: left;
+  padding: 10px;
   background-color: white;
-  height: 50vh;
+  height: 100%;
+}
+
+.actions {
+
 }

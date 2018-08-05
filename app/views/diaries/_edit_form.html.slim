@@ -27,10 +27,6 @@ script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.js"
         = f.submit
 
 javascript:
-  document.addEventListener('page:change', function () {
-    location.reload();
-  });
-
   window.onload = function () {
     new Vue({
       el: '#editor',
@@ -42,3 +38,12 @@ javascript:
       },
     });
   };
+
+  $(function () {
+    var $textarea = $('#n');
+    var lineHeight = parseInt($textarea.css('lineHeight'));
+    $textarea.on('input', function (e) {
+      var lines = ($(this).val() + '\n').match(/\n/g).length;
+      $(this).height(lineHeight * lines);
+    });
+  });
