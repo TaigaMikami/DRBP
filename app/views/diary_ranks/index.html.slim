@@ -6,6 +6,7 @@
         - @power_rank_diaries.each do |diary|
           li.list-group-item
             = image_tag diary.power&.dragon.image_url, size: '50x50'
+            = diary.user.profile.name
             = diary.title
             = link_to '詳細', diary
 
