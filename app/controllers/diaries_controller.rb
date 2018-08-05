@@ -26,8 +26,17 @@ class DiariesController < ApplicationController
   def create
     @diary = Diary.new(diary_params)
     @diary.user_id = current_user.id
+    @point = rand(100)
+
     respond_to do |format|
       if @diary.save
+        Dragon.all.each do |d|
+          if d.min_power <= @point && d.max_power >= @point
+            # TODO ここをAPIを叩くように
+            @power = Power.create(point: @point, diary_id: @diary.id, dragon_id: d.id)
+          end
+        end
+
         # notifier = Slack::Notifier.new(ENV['SLACK_WEBHOOK_URL']) #事前準備で取得したWebhook URL
         # notifier.ping("#{@diary.title}")
         format.html { redirect_to @diary, notice: 'Diary was successfully created.' }
@@ -64,6 +73,7 @@ class DiariesController < ApplicationController
   end
 
   def likes_ranking
+    @diaries = Diary.all.sort_by { |d| d.likes.count }.reverse
   end
 
   def power_ranking

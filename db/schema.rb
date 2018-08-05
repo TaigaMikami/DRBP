@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_02_170814) do
+ActiveRecord::Schema.define(version: 2018_08_05_024815) do
 
   create_table "diaries", force: :cascade do |t|
     t.string "title"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 2018_08_02_170814) do
     t.integer "likes_count", default: 0, null: false
   end
 
+  create_table "dragons", force: :cascade do |t|
+    t.string "name"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "min_power"
+    t.integer "max_power"
+  end
+
   create_table "likes", force: :cascade do |t|
     t.integer "user_id"
     t.integer "diary_id"
@@ -29,6 +38,14 @@ ActiveRecord::Schema.define(version: 2018_08_02_170814) do
     t.index ["diary_id"], name: "index_likes_on_diary_id"
     t.index ["user_id", "diary_id"], name: "index_likes_on_user_id_and_diary_id", unique: true
     t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
+  create_table "powers", force: :cascade do |t|
+    t.integer "point", default: 0
+    t.integer "dragon_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "diary_id"
   end
 
   create_table "users", force: :cascade do |t|

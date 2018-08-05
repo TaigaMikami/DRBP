@@ -1,0 +1,74 @@
+[
+  {
+    "name": "ミスターサタン",
+    "image_url": "https://img.atwikiimg.com/www30.atwiki.jp/niconicomugen/attach/658/8580/%E3%82%B5%E3%82%BF%E3%83%B3.png",
+    "min_power": 0,
+    "max_power": 8
+  },
+  {
+    "name": "桃白白",
+    "image_url": "https://pbs.twimg.com/profile_images/533255141437087746/l6x0tjEd_400x400.jpeg",
+    "min_power": 9,
+    "max_power": 17
+  },
+  {
+    "name": "餃子",
+    "image_url": "https://www.satofull.jp/upload/save_image/12151741_58525734d2edc.jpg",
+    "min_power": 18,
+    "max_power": 26
+  },
+  {
+    "name": "サイバイマン",
+    "image_url": "https://img.atwikiimg.com/www30.atwiki.jp/niconicomugen/attach/7934/16645/saibaiman.png",
+    "min_power": 27,
+    "max_power": 35
+  },
+  {
+    "name": "クリリン",
+    "image_url": "https://freecry.com/wp/wp-content/uploads/2017/01/kuririn-300x275.jpg",
+    "min_power": 36,
+    "max_power": 44
+  },
+  {
+    "name": "ヤムチャ",
+    "image_url": "http://d13n9ry8xcpemi.cloudfront.net/photo/odai/400/3f1baf86ebb317e7cc6fc94b33ce5e33_400.jpg",
+    "min_power": 45,
+    "max_power": 53
+  },
+  {
+    "name": "天津飯",
+    "image_url": "https://image.middle-edge.jp/medium/5d3aa5e3-5d3d-4b56-a297-184775e1f219.jpg?1468569666",
+    "min_power": 54,
+    "max_power": 62
+  },
+  {
+    "name": "ドリアン",
+    "image_url": "https://pbs.twimg.com/profile_images/1299198005/_____400x400.jpg",
+    "min_power": 63,
+    "max_power": 68
+  },
+  {
+    "name": "ピッコロ",
+    "image_url": "http://dic.nicovideo.jp/oekaki/23471.png",
+    "min_power": 69,
+    "max_power": 77
+  },
+  {
+    "name": "ベジータ",
+    "image_url": "https://stat.7gogo.jp/appimg_images/20150828/04/64/nk/j/t02400240p.jpg",
+    "min_power": 78,
+    "max_power": 86
+  },
+  {
+    "name": "フリーザ",
+    "image_url": "https://img.atwikiimg.com/www30.atwiki.jp/niconicomugen/attach/276/2465/F.jpg",
+    "min_power": 87,
+    "max_power": 94
+  },
+  {
+    "name": "悟空",
+    "image_url": "https://pbs.twimg.com/profile_images/591301038621257730/qv5ItQF2.jpg",
+    "min_power": 95,
+    "max_power": 100
+  }
+]

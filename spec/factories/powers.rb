@@ -1,17 +1,18 @@
 # == Schema Information
 #
-# Table name: likes
+# Table name: powers
 #
 #  id         :integer          not null, primary key
-#  user_id    :integer
-#  diary_id   :integer
+#  point      :integer          default(0)
+#  dragon_id  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  diary_id   :integer
 #
 
 FactoryBot.define do
-  factory :like do
-    user_id 1
-    diary_id 1
+  factory :power do
+    point 1
+    dragon_id 1
   end
 end

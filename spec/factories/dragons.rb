@@ -1,17 +1,19 @@
 # == Schema Information
 #
-# Table name: likes
+# Table name: dragons
 #
 #  id         :integer          not null, primary key
-#  user_id    :integer
-#  diary_id   :integer
+#  name       :string
+#  image_url  :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  min_power  :integer
+#  max_power  :integer
 #
 
 FactoryBot.define do
-  factory :like do
-    user_id 1
-    diary_id 1
+  factory :dragon do
+    name "MyString"
+    image_url "MyString"
   end
 end

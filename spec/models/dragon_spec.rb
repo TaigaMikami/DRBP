@@ -1,16 +1,18 @@
 # == Schema Information
 #
-# Table name: likes
+# Table name: dragons
 #
 #  id         :integer          not null, primary key
-#  user_id    :integer
-#  diary_id   :integer
+#  name       :string
+#  image_url  :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  min_power  :integer
+#  max_power  :integer
 #
 
 require 'rails_helper'
 
-RSpec.describe Like, type: :model do
+RSpec.describe Dragon, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end
