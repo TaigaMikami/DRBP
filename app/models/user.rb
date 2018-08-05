@@ -25,4 +25,5 @@ class User < ApplicationRecord
 
   has_many :diaries, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_one :profile
 end

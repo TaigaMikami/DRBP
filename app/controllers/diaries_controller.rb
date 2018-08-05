@@ -37,6 +37,8 @@ class DiariesController < ApplicationController
           end
         end
 
+        posted_diary_to_slack
+
         format.html { redirect_to @diary, notice: 'Diary was successfully created.' }
         format.json { render :show, status: :created, location: @diary }
       else
@@ -93,17 +95,21 @@ class DiariesController < ApplicationController
                                    username: "日報スカウター") #事前準備で取得したWebhook URL
 
     attachments = {
-      pretext: "#{@diary.user.name}さんの日報です！",
+      pretext: "#{@diary.user.profile.name}さんの日報です！ :grinning:",
 
       fields: [
+        {
+          title: "【戦闘力】#{@diary&.power.point}!! #{@diary&.power&.dragon.name}並みの強さです！:muscle:",
+        },
         {
           value: "==============================",
         },
         {
-          title: "【日報タイトル】#{@diary.title}\n",
+          title: "【日報タイトル】:love_letter:	",
+          value: "#{@diary.title}",
         },
         {
-          title: "【日報内容】",
+          title: "【日報内容】:speech_balloon:",
           value: "#{@diary.content}",
         },
         {
