@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_04_163503) do
+ActiveRecord::Schema.define(version: 2018_08_05_024815) do
 
   create_table "diaries", force: :cascade do |t|
     t.string "title"
@@ -41,10 +41,11 @@ ActiveRecord::Schema.define(version: 2018_08_04_163503) do
   end
 
   create_table "powers", force: :cascade do |t|
-    t.integer "point"
+    t.integer "point", default: 0
     t.integer "dragon_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "diary_id"
   end
 
   create_table "users", force: :cascade do |t|
