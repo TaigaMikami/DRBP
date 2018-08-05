@@ -13,7 +13,7 @@ def score():
         content = re.sub(r'\s','',content) # 改行,空白削除
 
         print(content)
-        good_content = re.search('##良かった(.+)##',content).group(1)
+        good_content = re.search('##.良かった(.+)##',content).group(1)
         if good_content == None:
             return flask.jsonify(data)
         else:
