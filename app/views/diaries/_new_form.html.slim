@@ -11,7 +11,7 @@ script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.js"
             - @diary.errors.full_messages.each do |message|
               li = message
       = f.label :title
-      = f.text_field :title, class: "form-control"
+      = f.text_field :title, class: "form-control", value: "#{Time.now.strftime("%Y-%m-%d")} #{current_user.profile.name} 日報"
 
       #editor
         .col-6.col-sm-6

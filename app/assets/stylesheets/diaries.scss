@@ -152,7 +152,13 @@ html{
   height: 50vh;
 }
 
+#diary_title {
+  width: 96%;
+  margin-left: 2%;
+}
+
 #editor {
+  margin-top: 20px;
   height: 300px;
 }
 .markdown-preview {
@@ -163,5 +169,5 @@ html{
 }
 
 .actions {
-
+  margin-top: 200px;
 }
