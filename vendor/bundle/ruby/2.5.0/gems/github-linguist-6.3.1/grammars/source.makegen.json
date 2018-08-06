@@ -1,9 +1,0 @@
-{
-  "name": "Makegen",
-  "scopeName": "source.makegen",
-  "patterns": [
-    {
-      "include": "source.perl"
-    }
-  ]
-}
