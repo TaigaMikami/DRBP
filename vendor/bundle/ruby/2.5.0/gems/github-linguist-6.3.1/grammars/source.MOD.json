@@ -1,0 +1,55 @@
+{
+  "name": "Kuka (MOD)",
+  "scopeName": "source.MOD",
+  "patterns": [
+    {
+      "name": "support.constant.MOD",
+      "match": "((wob|z)([A-Za-z0-9_]))",
+      "captures": {
+        "1": {
+          "name": "support.constant.MOD"
+        }
+      }
+    },
+    {
+      "name": "constant.numeric.MOD",
+      "match": "((-)?(\\d+)((.|,)\\d)?(%)?)"
+    },
+    {
+      "name": "constant.numeric.MOD",
+      "match": "([9])([E]\\+)([0-9]+)"
+    },
+    {
+      "name": "comment.number-sign.MOD",
+      "match": "(!.*$)"
+    },
+    {
+      "name": "keyword.MOD",
+      "match": "(PROC|ENDMODULE|MODULE|ENDPROC)\\s"
+    },
+    {
+      "name": "keyword.MOD",
+      "match": "\\s(MoveJ|MoveL|MoveAbsJ)\\s"
+    },
+    {
+      "name": "keyword.MOD",
+      "match": "(tl_|Wobj|fine)"
+    },
+    {
+      "name": "keyword.MOD",
+      "match": "\\s(IF|THEN|RETURN|PROC)\\s"
+    },
+    {
+      "name": "entity.name.type.MOD",
+      "match": "\\s?(ARRAY|BOOLEAN|BYTE|CONFIG|DISP_DAT_T|FILE|GROUP_ASSOC|INTEGER|JOINTPOS|PATH|POSITION|QUEUE_TYPE|REAL|SHORT|STD_PTH_NODE|STRING|VECTOR|XYZWPR|XYZWPREXT)\\s"
+    },
+    {
+      "name": "string.quoted.double.MOD",
+      "match": "\".*?\""
+    },
+    {
+      "name": "string.quoted.single.MOD",
+      "match": "\\'.*?\\'"
+    }
+  ]
+}

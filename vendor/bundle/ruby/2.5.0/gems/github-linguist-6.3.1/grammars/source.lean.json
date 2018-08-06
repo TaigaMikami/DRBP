@@ -1,0 +1,137 @@
+{
+  "name": "Lean",
+  "scopeName": "source.lean",
+  "patterns": [
+    {
+      "include": "#dashComment"
+    },
+    {
+      "include": "#blockComment"
+    },
+    {
+      "name": "meta.import.lean",
+      "begin": "^\\s*(import)\\b",
+      "end": "$",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.other.lean"
+        }
+      }
+    },
+    {
+      "name": "meta.names.lean",
+      "begin": "\\b(inductive|structure|record|theorem|proposition|axiom|axioms|lemma|hypothesis|definition|def|instance|class|constant)\\b[ \\t\\n\\r({\\[]+([^ \\t\\n\\r{(\\[]*)",
+      "end": "[ \\t\\n\\r{(\\[]",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.other.lean"
+        },
+        "2": {
+          "name": "variable.language.lean"
+        }
+      }
+    },
+    {
+      "name": "string.quoted.double.lean",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.lean",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "storage.type.lean",
+      "match": "\\b(Prop|Type[\\'₊₀-₉]?)"
+    },
+    {
+      "name": "storage.modifier.lean",
+      "match": "@\\[[^\\]]*\\]"
+    },
+    {
+      "name": "storage.modifier.lean",
+      "match": "attribute\\s*\\[[^\\]]*\\]"
+    },
+    {
+      "name": "keyword.other.lean",
+      "match": "\\b(import|prelude|theory|protected|private|noncomputable|mutual|meta|definition|def|instance|renaming|hiding|exposing|parameter|parameters|begin|conjecture|constant|constants|hypothesis|lemma|corollary|variable|variables|premise|premises|print|theorem|example|abbreviation|context|open|as|export|axiom|inductive|with|structure|record|universe|universes|alias|help|override|precedence|reserve|postfix|prefix|infix|infixl|infixr|notation|vm_eval|eval|check|exit|end|using|namespace|section|local|set_option|extends|include|omit|class|classes|instances|metaclasses|raw|run_command)\\b"
+    },
+    {
+      "name": "keyword.other.lean",
+      "match": "\\b(calc|have|assert|suppose|this|match|obtains|do|suffices|show|by|in|at|let|forall|fun|exists|if|then|else|assume|take|obtain|from)\\b"
+    },
+    {
+      "name": "constant.language.lua",
+      "match": "(-\u003e|==|:=|\u003c-\u003e|\\\\/|/\\\\|\u003c=|\u003e=|⁻¹)"
+    },
+    {
+      "name": "constant.language.lua",
+      "match": "[#@∼↔/=∧∨≠\u003c\u003e≤≥¬⬝▸+*-]"
+    },
+    {
+      "name": "keyword.operator.lean",
+      "match": "(?\u003c=\\s)[=→λ∀?]"
+    },
+    {
+      "name": "string.quoted.double.lean",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.lean",
+          "match": "\\\\(NUL|SOH|STX|ETX|EOT|ENQ|ACK|BEL|BS|HT|LF|VT|FF|CR|SO|SI|DLE|DC1|DC2|DC3|DC4|NAK|SYN|ETB|CAN|EM|SUB|ESC|FS|GS|RS|US|SP|DEL|[abfnrtv\\\\\\\"'\\\u0026])"
+        },
+        {
+          "name": "constant.character.escape.octal.lean",
+          "match": "\\\\o[0-7]+|\\\\x[0-9A-Fa-f]+|\\\\[0-9]+"
+        },
+        {
+          "name": "constant.character.escape.control.lean",
+          "match": "\\^[A-Z@\\[\\]\\\\\\^_]"
+        }
+      ],
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.lean"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.lean"
+        }
+      }
+    },
+    {
+      "name": "constant.numeric.lean",
+      "match": "\\b([0-9]+|0([xX][0-9a-fA-F]+))\\b"
+    }
+  ],
+  "repository": {
+    "blockComment": {
+      "name": "comment.block.lean",
+      "begin": "/-",
+      "end": "-/",
+      "captures": {
+        "0": {
+          "name": "punctuation.definition.comment.lean"
+        }
+      }
+    },
+    "dashComment": {
+      "name": "comment.line.double-dash.lean",
+      "begin": "(--)",
+      "end": "$",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.comment.lean"
+        }
+      }
+    },
+    "identifier": {
+      "name": "entity.name.function.lean",
+      "match": "\\b[^\\(\\)\\{\\}[:space:]=→λ∀?][^\\(\\)\\{\\}[:space:]]*"
+    }
+  }
+}

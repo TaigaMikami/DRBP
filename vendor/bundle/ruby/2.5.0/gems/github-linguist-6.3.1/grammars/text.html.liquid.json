@@ -1,0 +1,25 @@
+{
+  "name": "HTML Liquid",
+  "scopeName": "text.html.liquid",
+  "patterns": [
+    {
+      "name": "source.liquid.tags.embedded.html",
+      "begin": "{%+(?!\u003e)=?",
+      "end": "%}",
+      "patterns": [
+        {}
+      ]
+    },
+    {
+      "name": "source.liquid.output.embedded.html",
+      "begin": "{{",
+      "end": "}}",
+      "patterns": [
+        {}
+      ]
+    },
+    {
+      "include": "text.html.basic"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Logos",
+  "scopeName": "source.logos",
+  "patterns": [
+    {
+      "name": "keyword.source.logos",
+      "match": "%(init|hook|subclass|group|class|new|ctor|end|config|orig|log)"
+    },
+    {
+      "match": "%c\\(([A-Za-z$_]+)\\)",
+      "captures": {
+        "1": {
+          "name": "keyword.source.logos"
+        }
+      }
+    },
+    {
+      "include": "source.objc"
+    },
+    {
+      "include": "source.c++"
+    }
+  ]
+}

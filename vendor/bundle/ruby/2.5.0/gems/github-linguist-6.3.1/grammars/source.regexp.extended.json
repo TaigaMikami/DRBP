@@ -1,0 +1,20 @@
+{
+  "name": "Regular Expression (Extended)",
+  "scopeName": "source.regexp.extended",
+  "patterns": [
+    {
+      "include": "source.regexp#main"
+    }
+  ],
+  "injections": {
+    "source.regexp.extended": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign",
+          "begin": "(?\u003c![^\\\\]\\\\)#",
+          "end": "$"
+        }
+      ]
+    }
+  }
+}
