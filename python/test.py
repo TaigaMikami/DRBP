@@ -27,7 +27,7 @@ def mecab(text):
         if word == '名詞':
             meishi_count += 1
 
-    meishi_ration = meishi_count/all_count
+    meishi_ration = meishi_count/all_count * 5
     print(meishi_ration)
     if meishi_ration >= 0.7:
         return False
@@ -40,9 +40,8 @@ def mecab(text):
 def score():
     data = {'success':False}
     if request.method == 'POST':
-        # content = request.form['content'] # 日報内容
-        with open('test.txt','r') as f:
-            content = f.read()
+        content = request.form['content'] # 日報内容
+
         content = re.sub(r'\s','',content) # 改行,空白削除
         good_content = re.search('##良かった(.+)##',content).group(1)
         if good_content == None:
@@ -58,7 +57,7 @@ def score():
                 score *= 100
                 data['score'] = score
             else:
-                pass
+                data['score'] = 0
 
     return flask.jsonify(data)
 
