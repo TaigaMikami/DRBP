@@ -23,7 +23,7 @@
                   = diary.likes.count
 
       .col-md-8
-        div data-diary-id="#{@diary.id}" id="diary-#{@diary.id}"
+
           .title
             h2.heading = @diary.title
           ul.nav.nav-pills.nav-fill
@@ -31,9 +31,10 @@
               li.nav-item
                 = link_to '編集', edit_diary_path(@diary), class: 'nav-link'
             li.nav-item
-              = link_to '日報一覧へ', diaries_path, class: 'nav-link'
+                = link_to '日報一覧へ', diaries_path, class: 'nav-link'
             li.nav-item
-              = render "likes/like", diary: @diary
+              div data-diary-id="#{@diary.id}" id="diary-#{@diary.id}"
+                = render "likes/like", diary: @diary
 
           .content
             = qiita_markdown(@diary.content)
