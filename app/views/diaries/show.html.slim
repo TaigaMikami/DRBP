@@ -3,6 +3,7 @@
       div data-diary-id="#{@diary.id}" id="diary-#{@diary.id}"
         .title
           h2.heading = @diary.title
+          h3 = @diary.power.point
 
         p#notice = notice
 

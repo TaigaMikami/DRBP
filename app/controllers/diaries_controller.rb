@@ -31,8 +31,10 @@ class DiariesController < ApplicationController
     respond_to do |format|
       if @diary.save
         Dragon.all.each do |d|
+          res = Net::HTTP.post_form(URI.parse('http://0.0.0.0:80/score'),{'content' => @diary.content})
+          power_json = JSON.parse(res.body)
+          @point = power_json["score"]
           if d.min_power <= @point && d.max_power >= @point
-            # TODO ここをAPIを叩くように
             @power = Power.create(point: @point, diary_id: @diary.id, dragon_id: d.id)
           end
         end
