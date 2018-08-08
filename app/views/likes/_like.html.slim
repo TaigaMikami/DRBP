@@ -2,10 +2,12 @@
   span.like
     - if diary.iine?(current_user)
       = form_for(diary.likes.find_by(user_id: current_user.id), method: :delete, remote: true) do |f|
-        = button_tag(class: "btn btn-default btn-xs") do
+        = button_tag(class: "btn btn-default") do
+          | いいね
           = content_tag :span, "#{diary.likes_count}", class: "glyphicon glyphicon-heart"
     - else
       = form_for(diary.likes.build, remote: true) do |f|
         div= hidden_field_tag :diary_id, diary.id
-        = button_tag(class: "btn btn-default btn-xs") do
+        = button_tag(class: "btn btn-default") do
+          | いいね
           = content_tag :span, "#{diary.likes_count}", class: "glyphicon glyphicon-heart-empty"

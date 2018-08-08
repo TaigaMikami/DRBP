@@ -1,22 +1,39 @@
 .section
-    .container
-      div data-diary-id="#{@diary.id}" id="diary-#{@diary.id}"
-        .title
-          h2.heading = @diary.title
-          h3 = @diary.power.point
+  .container.show-diary-report
+    .row
+      .col-md-4.show-diary-report-side
+        .side-content
+          = image_tag @diary.power&.dragon.image_url, size: '300x300'
+          h4
+            | 貴様の今日の働きぶりは...
+          h2
+            | 戦闘力
+            = @diary.power.point
+          h3
+            = @diary.power&.dragon.name
+            | 並みだ！
 
-        p#notice = notice
+          ul.list-group
+            li.list-group-item.list-group-item-action.list-group-item-success いいねランキング
+            - @power_rank_diaries.each do |diary|
+              li.list-group-item
+                = image_tag diary.power&.dragon.image_url, size: '20x20'
+                = diary.title
+                .btn.btn-info.btn-sm.iine
+                  = diary.likes.count
 
-        p
-          strong タイトル:
-          = @diary.title
-        p
-          strong 内容:
+      .col-md-8
+        div data-diary-id="#{@diary.id}" id="diary-#{@diary.id}"
+          .title
+            h2.heading = @diary.title
+          ul.nav.nav-pills.nav-fill
+            - if current_user.id == @diary.user.id
+              li.nav-item
+                = link_to '編集', edit_diary_path(@diary), class: 'nav-link'
+            li.nav-item
+              = link_to '日報一覧へ', diaries_path, class: 'nav-link'
+            li.nav-item
+              = render "likes/like", diary: @diary
+
           .content
             = qiita_markdown(@diary.content)
-
-        => link_to '編集', edit_diary_path(@diary)
-        '|
-        =< link_to '日報一覧へ', diaries_path
-
-        = render "likes/like", diary: @diary
