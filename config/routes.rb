@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
   get 'diary_ranks', to: 'diary_ranks#index'
   get 'powers/index'
   get 'dragons/index'
