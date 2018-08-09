@@ -4,6 +4,19 @@
 
 .my-diary-report-side {
   text-align: center;
-  background-color: #FDFEFE;
+  background-color: rgba(255,255,255,0.9);
   margin-top: 100px;
+}
+
+@media screen and (max-width: 1119px){
+  .content-wrapper{
+    padding: 50px 0;
+  }
+}
+
+.side-content-text{
+  border: solid 1px #000;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 0 10px;
 }

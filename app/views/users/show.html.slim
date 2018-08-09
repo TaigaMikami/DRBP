@@ -1,17 +1,19 @@
 .section
   .container.show-diary-report
     .row
-      .col-md-4.my-diary-report-side
+      .col-md-4.my-diary-report-side.content-wrapper
         .side-content
-          = image_tag @diary.power&.dragon.image_url, size: '300x300'
-          h4
-            | 貴様の今日の働きぶりは...
-          h2
-            | 戦闘力
-            = @diary.power.point
-          h3
-            = @diary.power&.dragon.name
-            | 並みだ！
+          = image_tag @diary.power&.dragon.image_url, size: '300x300', class: 'img-responsive center-block'
+          .side-content-text
+            h4
+              | 貴様の今日の働きぶりは...
+            h2
+              | 戦闘力
+              span style='color: #FF0033'
+                = @diary.power.point
+            h3
+              = @diary.power&.dragon.name
+              | 並みだ！
 
       .col-md-8
         .title
