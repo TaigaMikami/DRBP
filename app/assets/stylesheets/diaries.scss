@@ -23,6 +23,7 @@ html{
 }
 
 .user-link {
+  z-index: 1;
   display: inline-flex;
   position: fixed;
   right: 30px;
@@ -143,9 +144,10 @@ html{
 
 .content{
   background-color: rgba(255,255,255,0.9);
-  padding: 80px 30px;
-  width: 60%;
+  padding: 20px 30px;
   margin: 0 auto;
+  text-align: left;
+  border-radius: 5px;
 }
 
 #diary_content {
@@ -170,4 +172,40 @@ html{
 
 .actions {
   margin-top: 200px;
+}
+
+// 日報詳細
+.show-diary-report {
+  width: 90%;
+  text-align: left !important;
+  .nav-link {
+    color: white;
+    background-color: #34C3E1;
+    &:hover {
+      color: black;
+    }
+
+  }
+}
+
+.show-diary-report-side {
+  text-align: center;
+  background-color: #FDFEFE;
+}
+
+.side-content {
+  margin: 50px;
+  ul {
+    margin-top: 50px;
+    text-align: left;
+  }
+  .iine {
+    margin-left: 0px;
+  }
+}
+
+.like {
+  button {
+    height: 41px;
+  }
 }
