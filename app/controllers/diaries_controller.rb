@@ -11,6 +11,7 @@ class DiariesController < ApplicationController
   # GET /diaries/1.json
   def show
     @power_rank_diaries = Diary.created_today.sort_by { |d| d.power.point }.reverse
+    gon.power = @diary.power.point
   end
 
   # GET /diaries/new

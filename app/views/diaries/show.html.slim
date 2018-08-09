@@ -3,17 +3,19 @@
     .row
       .col-md-4.show-diary-report-side.content-wrapper
         .side-content
-          = image_tag @diary.power&.dragon.image_url, size: '300x300', class: 'img-responsive center-block'
+          .dragon-img
+            = image_tag @diary.power&.dragon.image_url, size: '300x300', class: 'img-responsive center-block'
           .side-content-text
             h4
               | 貴様の今日の働きぶりは...
             h2
               | 戦闘力：
-              span style='color: #FF0033'
-                = @diary.power.point
-            h3
-              = @diary.power&.dragon.name
-              | 並みだ！
+              span.odometer#odometer style='color: #FF0033;'
+                | 000
+            .fade-content
+              h3 style='display: none;'
+                = @diary.power&.dragon.name
+                | 並みだ！
 
           ul.list-group
             li.list-group-item.list-group-item-action.list-group-item-success いいねランキング
@@ -39,3 +41,15 @@
 
           .content
             = qiita_markdown(@diary.content)
+
+
+javascript:
+  var power = gon.power
+  $(document).ready(function() {
+      setTimeout(function(){
+          $('.odometer').html(power)
+      }, 1000);
+      setTimeout(function(){
+          $('.fade-content h3, .side-content img').fadeIn(3000)
+      }, 2000);
+  });

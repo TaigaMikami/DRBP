@@ -220,5 +220,22 @@ html{
   border: solid 1px #000;
   border-radius: 5px;
   margin-top: 20px;
-  padding: 0 10px;
+  padding: 10px;
+}
+
+.side-content img{
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  display: none;
+}
+
+.fade-content{
+  height: 26px;
+  h3{
+    margin: 0;
+  }
+}
+
+.dragon-img{
+  height: 300px;
 }
