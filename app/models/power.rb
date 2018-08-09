@@ -13,4 +13,6 @@
 class Power < ApplicationRecord
   belongs_to :diary
   belongs_to :dragon
+
+  validates :point, presence: true
 end

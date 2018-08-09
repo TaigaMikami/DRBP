@@ -100,10 +100,10 @@ class DiariesController < ApplicationController
 
     attachments = {
       pretext: "#{@diary.user.profile.name}さんの日報です！ :grinning:",
-
+      image_url: "#{@diary&.power&.dragon.image_url}",
       fields: [
         {
-          title: "【戦闘力】#{@diary&.power.point}!! #{@diary&.power&.dragon.name}並みの強さです！:muscle:",
+          title: "【戦闘力】#{@diary&.power.point}!! #{@diary&.power&.dragon.name}並みの強さです！:muscle:",git s
         },
         {
           value: "==============================",
