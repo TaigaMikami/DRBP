@@ -42,6 +42,9 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
+# gon
+gem 'gon'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'

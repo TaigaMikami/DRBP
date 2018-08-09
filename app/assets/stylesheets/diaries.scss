@@ -190,13 +190,13 @@ html{
 
 .show-diary-report-side {
   text-align: center;
-  background-color: #FDFEFE;
+  background-color: rgba(255,255,255,0.9);
 }
 
 .side-content {
   margin: 50px;
   ul {
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: left;
   }
   .iine {
@@ -208,4 +208,35 @@ html{
   button {
     height: 41px;
   }
+}
+
+@media screen and (max-width: 1119px){
+  .content-wrapper{
+    padding: 50px 0;
+  }
+}
+
+.side-content-text{
+  border: solid 1px #000;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.side-content img{
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  display: none;
+}
+
+.fade-content{
+  height: 26px;
+  h3{
+    margin: 0;
+    display: none;
+  }
+}
+
+.dragon-img{
+  height: 300px;
 }

@@ -1,17 +1,22 @@
 .section
   .container.show-diary-report
     .row
-      .col-md-4.my-diary-report-side
+      .col-md-4.my-diary-report-side.content-wrapper
         .side-content
-          = image_tag @diary.power&.dragon.image_url, size: '300x300'
-          h4
-            | 貴様の今日の働きぶりは...
-          h2
-            | 戦闘力
-            = @diary.power.point
-          h3
-            = @diary.power&.dragon.name
-            | 並みだ！
+          .dragon-img
+            = image_tag @diary.power&.dragon.image_url, size: '300x300', class: 'img-responsive center-block'
+          .side-content-text
+            h4
+              | 貴様の今日の働きぶりは...
+            h2
+              | 戦闘力：
+              span.odometer#odometer style='color: #FF0033'
+                | 000
+            .fade-content
+              h3
+                = @diary.power&.dragon.name
+                | 並みだ！
+
 
       .col-md-8
         .title
@@ -42,3 +47,14 @@
               span.btn = diary.title
               span.btn = diary.content[0, 30]
               span.btn.power-time = diary.created_at.strftime("%Y-%m-%d-%H:%M")
+
+javascript:
+  var power = gon.power
+  $(document).ready(function() {
+    setTimeout(function(){
+          $('.odometer').html(power)
+    }, 1000);
+    setTimeout(function(){
+        $('.fade-content h3, .side-content img').fadeIn(3000)
+    }, 2000);
+  });
