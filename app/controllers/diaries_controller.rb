@@ -36,7 +36,6 @@ class DiariesController < ApplicationController
           power_json = JSON.parse(res.body)
           @point = power_json["score"]
           if d.min_power <= @point && d.max_power >= @point
-            # @power = Power.create(point: @point, diary_id: @diary.id, dragon_id: d.id)
             @power = Power.create(point: @point, diary_id: @diary.id, dragon_id: d.id)
           end
         end
