@@ -45,7 +45,7 @@ def score():
         content = request.form['content'] # 日報内容
 
         content = re.sub(r'\s','',content) # 改行,空白削除
-        good_content = re.search('##良かったこと(.+)##',content).group(1)
+        good_content = re.search('##Good(.+)##',content).group(1)
         if good_content == None:
             return flask.jsonify(data)
         else:
