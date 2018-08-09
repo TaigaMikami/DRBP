@@ -103,7 +103,7 @@ class DiariesController < ApplicationController
       image_url: "#{@diary&.power&.dragon.image_url}",
       fields: [
         {
-          title: "【戦闘力】#{@diary&.power.point}!! #{@diary&.power&.dragon.name}並みの強さです！:muscle:",git s
+          title: "【戦闘力】#{@diary&.power.point}!! #{@diary&.power&.dragon.name}並みの強さです！:muscle:",
         },
         {
           value: "==============================",
