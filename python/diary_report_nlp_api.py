@@ -28,9 +28,12 @@ def mecab(text):
     for word in meishi_list:
         if word == '名詞':
             meishi_count += 1
+        elif word == '感動詞':
+            return False
+    import pdb;pdb.set_trace()
 
     meishi_ration = meishi_count/all_count
-    print(meishi_ration)
+
     if meishi_ration >= 0.8:
         return False
     else:
@@ -45,7 +48,8 @@ def score():
         content = request.form['content'] # 日報内容
 
         content = re.sub(r'\s','',content) # 改行,空白削除
-        good_content = re.search('##Good(.+)##',content).group(1)
+        content = re.sub(r'-','',content) # -を削除
+        good_content = re.search('##Good(.+)##Keep',content).group(1)
         if good_content == None:
             return flask.jsonify(data)
         else:

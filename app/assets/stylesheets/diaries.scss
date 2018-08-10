@@ -171,7 +171,22 @@ html{
 }
 
 .actions {
-  margin-top: 200px;
+  margin-top: 150px;
+  input{
+    border: solid 2px #000000;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: #fff;
+  }
+}
+.back-btn{
+  display: inline-block;
+  border: solid 2px #000000;
+  border-radius: 5px;
+  background-color: #d9534f;
+  padding: 1px 7px 2px;
+  color: #fff;
+
 }
 
 // 日報詳細
