@@ -12,11 +12,14 @@
   .container
     .row.headerNavBox
       = link_to diary_ranks_path
-        .col-xs-6.col-sm-4.headerNavBtn
+        .col-xs-6.col-sm-3.headerNavBtn
           |  日報一覧
       = link_to new_diary_path
-        .col-xs-6.col-sm-4.headerNavBtn
+        .col-xs-6.col-sm-3.headerNavBtn
           |  新規投稿
+      = link_to dragons_index_path
+        .col-xs-6.col-sm-3.headerNavBtn
+          |  戦闘力表
       = link_to users_show_path
-        .col-xs-6.col-sm-4.headerNavBtn
+        .col-xs-6.col-sm-3.headerNavBtn
           |  マイページ

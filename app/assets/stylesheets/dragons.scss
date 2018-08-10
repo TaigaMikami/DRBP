@@ -1,3 +1,49 @@
 // Place all the styles related to the dragons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+//.dragon-list {
+//  text-align: center !important;
+//  color: white !important;
+//}
+
+.box13 {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #FFF;
+  background: #5cb85c;
+  border-bottom: solid 6px #3c763d;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+.box13 p {
+  margin: 0;
+  padding: 0;
+}
+
+.card-body {
+  table {
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+
+  td {
+    padding: 10px 30px;
+  }
+
+  .min-value {
+    background-color: #3f87ce;
+  }
+
+  .max-value {
+    background-color: #d9534f;
+  }
+  .power-value {
+    background-color: #fffee9;
+    color: #2E2F30;
+  }
+}
+
+.explain {
+  //background-color: #EFF2F8;
+  background-color: rgba(239,243,248,0.4);
+}

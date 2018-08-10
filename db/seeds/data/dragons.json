@@ -1,73 +1,73 @@
 [
   {
-    "name": "ミスターサタン",
-    "image_url": "https://img.atwikiimg.com/www30.atwiki.jp/niconicomugen/attach/658/8580/%E3%82%B5%E3%82%BF%E3%83%B3.png",
+    "name": "ピーマン",
+    "image_url": "https://1.bp.blogspot.com/-OvBGwezLjMI/Uvy6HuGYn-I/AAAAAAAAdvs/L30ZcpfWuPo/s800/character_piman.png",
     "min_power": 0,
     "max_power": 8
   },
   {
-    "name": "桃白白",
-    "image_url": "https://pbs.twimg.com/profile_images/533255141437087746/l6x0tjEd_400x400.jpeg",
+    "name": "納豆",
+    "image_url": "https://1.bp.blogspot.com/-3QYPEGCAI5o/VUIJwT_DOGI/AAAAAAAAtZA/Pe8ZfrGtBYs/s800/food_nattou_wara.png",
     "min_power": 9,
     "max_power": 17
   },
   {
-    "name": "餃子",
-    "image_url": "https://www.satofull.jp/upload/save_image/12151741_58525734d2edc.jpg",
+    "name": "セロリ",
+    "image_url": "https://1.bp.blogspot.com/-nAXCR4NxNdY/U2sr0sj5SdI/AAAAAAAAf5U/FuzwQEsAjhU/s800/vegetable_celery.png",
     "min_power": 18,
     "max_power": 26
   },
   {
-    "name": "サイバイマン",
-    "image_url": "https://img.atwikiimg.com/www30.atwiki.jp/niconicomugen/attach/7934/16645/saibaiman.png",
+    "name": "たくわん",
+    "image_url": "https://2.bp.blogspot.com/-RHOlXAgum3g/Uj_237wBJFI/AAAAAAAAYDU/olFcRNpwPhc/s800/food_takuan.png",
     "min_power": 27,
     "max_power": 35
   },
   {
-    "name": "クリリン",
-    "image_url": "https://freecry.com/wp/wp-content/uploads/2017/01/kuririn-300x275.jpg",
+    "name": "ちくわ",
+    "image_url": "https://3.bp.blogspot.com/-FRjXK58AML0/U6llMX8XGII/AAAAAAAAhss/t6fijVSmMvw/s800/food_chikuwa.png",
     "min_power": 36,
     "max_power": 44
   },
   {
-    "name": "ヤムチャ",
-    "image_url": "http://d13n9ry8xcpemi.cloudfront.net/photo/odai/400/3f1baf86ebb317e7cc6fc94b33ce5e33_400.jpg",
+    "name": "ポテトフライ",
+    "image_url": "https://1.bp.blogspot.com/-ioMDbzmYT7I/UgSMBbpopaI/AAAAAAAAW6M/h__92h9Wv5c/s800/food_frenchfry.png",
     "min_power": 45,
     "max_power": 53
   },
   {
-    "name": "天津飯",
-    "image_url": "https://image.middle-edge.jp/medium/5d3aa5e3-5d3d-4b56-a297-184775e1f219.jpg?1468569666",
+    "name": "コロッケ",
+    "image_url": "https://1.bp.blogspot.com/--byUPvH7BpU/WUdYVajJelI/AAAAAAABE6o/QptS0h93FIYtN12lk8W8n-dWZR7-A6YywCLcBGAs/s800/food_korokke_corn.png",
     "min_power": 54,
     "max_power": 62
   },
   {
-    "name": "ドリアン",
-    "image_url": "https://pbs.twimg.com/profile_images/1299198005/_____400x400.jpg",
+    "name": "餃子",
+    "image_url": "https://1.bp.blogspot.com/-WxOp8O_dBbc/Vq88pc0hHGI/AAAAAAAA3dA/u0bHOFGUabY/s800/food_gyouza_mise.png",
     "min_power": 63,
     "max_power": 68
   },
   {
-    "name": "ピッコロ",
-    "image_url": "http://dic.nicovideo.jp/oekaki/23471.png",
+    "name": "オムライス",
+    "image_url": "https://1.bp.blogspot.com/-uu2ELAP5kkc/UgSMF_E5u1I/AAAAAAAAW78/MebPztVKjMA/s800/food_omurice.png",
     "min_power": 69,
     "max_power": 77
   },
   {
-    "name": "ベジータ",
-    "image_url": "https://stat.7gogo.jp/appimg_images/20150828/04/64/nk/j/t02400240p.jpg",
+    "name": "ハンバーグ",
+    "image_url": "https://1.bp.blogspot.com/-Hli6afTS54w/UgSMCMQNnNI/AAAAAAAAW6c/FXu-zvewMWY/s800/food_hamburg.png",
     "min_power": 78,
     "max_power": 86
   },
   {
-    "name": "フリーザ",
-    "image_url": "https://img.atwikiimg.com/www30.atwiki.jp/niconicomugen/attach/276/2465/F.jpg",
+    "name": "すし",
+    "image_url": "https://2.bp.blogspot.com/-RB1mDuQvGkI/USyJ0W9QfKI/AAAAAAAAObc/Idip0N8CFUw/s1600/nigirizushi_moriawase.png",
     "min_power": 87,
     "max_power": 94
   },
   {
-    "name": "悟空",
-    "image_url": "https://pbs.twimg.com/profile_images/591301038621257730/qv5ItQF2.jpg",
+    "name": "カレー",
+    "image_url": "https://3.bp.blogspot.com/-4IdLwhW46Sg/WWNAjPttzOI/AAAAAAABFUU/GzsWCl2m4uISohy-kXP0cWj13IqKKXqoACLcBGAs/s800/food_curry_dorodoro.png",
     "min_power": 95,
     "max_power": 100
   }

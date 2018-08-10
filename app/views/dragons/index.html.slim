@@ -1,14 +1,30 @@
-table.table.table-hover
-  thead
-    tr
-      th 画像
-      th 名前
-      th 最小値
-      th 最大値
-  tbody
-    - @dragons.each do |dragon|
-      tr
-        td = image_tag dragon.image_url, size: '240x240'
-        td = dragon.name
-        td = dragon.min_power
-        td = dragon.max_power
+.section
+  .container
+    .row
+      .col-md-12
+        section.text-center
+          /! Grid row
+          .row.mb-4.wow.fadeIn
+            = image_tag 'explain.png', width: 800, class: 'explain'
+            - @dragons.each_with_index do |dragon, index|
+              .col-lg-4.col-md-6.mb-4
+                /! Card
+                .card.box13
+                  /! Card header
+                  .card-header
+                    = image_tag dragon.image_url, size: '250x250', class: "card-img-top"
+                    h1
+                      = dragon.name
+                    h2
+                      = index + 1
+                      | 位
+                  .card-body
+                    /! Text
+                    table border="1"
+                      tr
+                        td.max-value 最大値
+                        td.power-value = dragon.max_power
+                      tr
+                        td.min-value 最小値
+                        td.power-value = dragon.min_power
+

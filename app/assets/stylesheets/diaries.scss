@@ -219,6 +219,12 @@ html{
   }
 }
 
+.explain-side {
+  margin-top: 20px;
+  background-color: rgba(255,255,255,0.0) !important;
+  box-shadow: none !important;
+}
+
 .like {
   button {
     height: 41px;
@@ -254,4 +260,9 @@ html{
 
 .dragon-img{
   height: 300px;
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+  }
 }

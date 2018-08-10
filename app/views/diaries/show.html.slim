@@ -17,6 +17,8 @@
                 = @diary.power&.dragon.name
                 | 並みだ！
 
+
+          = image_tag 'explain.png', width: 300, class: 'explain-side'
           ul.list-group
             li.list-group-item.list-group-item-action.list-group-item-success いいねランキング
             - @power_rank_diaries.each do |diary|
