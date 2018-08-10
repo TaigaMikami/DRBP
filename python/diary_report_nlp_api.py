@@ -30,7 +30,6 @@ def mecab(text):
             meishi_count += 1
         elif word == '感動詞':
             return False
-    import pdb;pdb.set_trace()
 
     meishi_ration = meishi_count/all_count
 
